@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+
+        <title>Surface Temperature Analysis</title>
+        <style>
+            body {
+                transform: scale(0.9);
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;UNVEILING CLIMATE CHANGE DYNAMICS THROUGH EARTH SURFACE TEMPERATURE ANALYSIS</h3>
+
+        <div class="container">
+            <article>
+                <h3>Input</h3><hr>
+
+                <form action="/response" method="Post">
+
+                    <strong>LandAverageTemperatureUncertainty</strong>
+                    <input type="number" name="LandAverageTemperatureUncertainty" placeholder="Enter a Valid Number" step="any" required>
+
+                    <strong>LandMaxTemperature</strong>
+                    <input type="number" name="LandMaxTemperature" placeholder="Enter a Valid Number" step="any" required>
+
+                    <strong>LandMaxTemperatureUncertainty</strong>
+                    <input type="number" name="LandMaxTemperatureUncertainty" placeholder="Enter a Valid Number" step="any" required>
+
+                    <strong>LandMinTemperature</strong>
+                    <input type="number" name="LandMinTemperature" placeholder="Enter a Valid Number" step="any" required>
+
+                    <strong>LandMinTemperatureUncertainty</strong>
+                    <input type="number" name="LandMinTemperatureUncertainty" placeholder="Enter a Valid Number" step="any" required>
+
+                    <strong>LandAndOceanAverageTemperature</strong>
+                    <input type="number" name="LandAndOceanAverageTemperature" placeholder="Enter a Valid Number" step="any" required>
+
+                    <strong>LandAndOceanAverageTemperatureUncertainty</strong>
+                    <input type="number" name="LandAndOceanAverageTemperatureUncertainty" placeholder="Enter a Valid Number" step="any" required>
+
+                    <div class="grid">
+
+                        <div>
+                            <input type="submit" value="submit">
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div>
+                            <ul>
+                                <details class="dropdown">
+                                <summary role="button" class="secondary">Theme</summary>
+                                <ul>
+                                    <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                                    <li><a href="#" data-theme-switcher="light">Light</a></li>
+                                    <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+                                </ul>
+                                </details>
+                            </ul>
+                        </div>
+
+                    </div>
+                </form>
+            </article>
+        </div>
+
+        <script type="text/javascript" src="{{url_for('static',filename='minimal-theme-switcher.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='model.js')}}"></script>
+        <br>
+
+    </body>
+</html>
